@@ -1,0 +1,27 @@
+{
+  "name": "mocha-directory",
+  "version": "1.0.0",
+  "description": "Allows you to organize your mocha test suites as directories",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/frenchie4111/mocha-directory.git"
+  },
+  "keywords": [
+    "mocha",
+    "directory",
+    "suite",
+    "tests",
+    "dir",
+    "bdd"
+  ],
+  "author": "Mike Lyons <mdl0394@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/frenchie4111/mocha-directory/issues"
+  },
+  "homepage": "https://github.com/frenchie4111/mocha-directory"
+}
