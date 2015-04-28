@@ -23,5 +23,10 @@
   "bugs": {
     "url": "https://github.com/frenchie4111/mocha-directory/issues"
   },
-  "homepage": "https://github.com/frenchie4111/mocha-directory"
+  "homepage": "https://github.com/frenchie4111/mocha-directory",
+  "dependencies": {
+    "callsite": "^1.0.0",
+    "chai": "^2.3.0",
+    "underscore": "^1.8.3"
+  }
 }

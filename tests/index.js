@@ -8,5 +8,5 @@
 (function() {
     'use strict';
 
-
+    require( '../' )();
 })();
