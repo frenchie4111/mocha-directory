@@ -11,4 +11,5 @@ var assert = require( 'chai' ).assert;
 
 it( 'should have value', function() {
     assert( global.before_set == true );
+    assert( global.lifecycle_before_set == true );
 } );

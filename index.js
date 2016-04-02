@@ -18,7 +18,8 @@
         'before',
         'beforeEach',
         'after',
-        'afterEach'
+        'afterEach',
+        'lifecycle'
     ];
 
     assert( describe );
