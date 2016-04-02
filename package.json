@@ -1,6 +1,6 @@
 {
   "name": "mocha-directory",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Allows you to organize your mocha test suites as directories",
   "main": "index.js",
   "scripts": {
@@ -26,7 +26,9 @@
   "homepage": "https://github.com/frenchie4111/mocha-directory",
   "dependencies": {
     "callsite": "^1.0.0",
-    "chai": "^2.3.0",
     "underscore": "^1.8.3"
+  },
+  "devDependencies": {
+    "chai": "^2.3.0"
   }
 }

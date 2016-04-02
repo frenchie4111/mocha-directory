@@ -8,13 +8,13 @@
 (function() {
     'use strict';
 
-    var assert = require( 'chai' ).assert,
+    var assert = require( 'assert' ),
         callsite = require( 'callsite' ),
         path = require( 'path' ),
         fs = require( 'fs' ),
         _ = require( 'underscore' );
 
-    assert.isDefined( describe );
+    assert( describe );
 
     var removeExtension = function( filename ) {
         var filename_split = filename.split( '.' );
