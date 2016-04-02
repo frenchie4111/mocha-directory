@@ -49,6 +49,9 @@
             .filter( function( file ) {
                 return !file.match( /^\..*/ );
             } )
+            .filter( function( file ) {
+                return file.match( /.*\.js$/ );
+            } )
             .map( function( file ) {
                 return path.resolve( root_directory, file );
             } )

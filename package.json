@@ -4,7 +4,7 @@
   "description": "Allows you to organize your mocha test suites as directories",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha tests/"
   },
   "repository": {
     "type": "git",
