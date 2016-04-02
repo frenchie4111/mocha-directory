@@ -5,4 +5,6 @@
  * of the MIT license.  See the LICENSE file for details.
  */
 
-global.before_set = true;
+beforeEach( function() {
+    global.before_set = true;
+} );

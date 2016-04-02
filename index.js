@@ -62,9 +62,7 @@
                 var basename = path.basename( file, '.js' );
 
                 if( _.contains( MOCHA_LIFECYCLE_METHODS, basename ) ) {
-                    global[ basename ]( function() {
-                        requireAbsolute( file );
-                    } );
+                    requireAbsolute( file );
                 } else {
                     describe( basename, function() {
                         requireAbsolute( file );
