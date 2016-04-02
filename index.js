@@ -14,6 +14,13 @@
         fs = require( 'fs' ),
         _ = require( 'underscore' );
 
+    var MOCHA_LIFECYCLE_METHODS = [
+        'before',
+        'beforeEach',
+        'after',
+        'afterEach'
+    ];
+
     assert( describe );
 
     var removeExtension = function( filename ) {
@@ -36,20 +43,6 @@
     var recursiveTestImport = function( root_directory ) {
         var file_list = fs.readdirSync( root_directory );
 
-        // Recurse on directories
-        _
-            .chain( file_list )
-            .filter( function( file ) {
-                var file_path = path.resolve( root_directory, file );
-                return fs.lstatSync( file_path ).isDirectory()
-            } )
-            .each( function( file ) {
-                var file_path = path.resolve( root_directory, file );
-                describe( file, function() {
-                    recursiveTestImport( file_path );
-                } )
-            } );
-
         // Run files
         _
             .chain( file_list )
@@ -63,7 +56,31 @@
                 return fs.lstatSync( file ).isFile()
             } )
             .each( function( file ) {
-                requireAbsolute( file );
+                var basename = path.basename( file, '.js' );
+
+                if( _.contains( MOCHA_LIFECYCLE_METHODS, basename ) ) {
+                    global[ basename ]( function() {
+                        requireAbsolute( file );
+                    } );
+                } else {
+                    describe( basename, function() {
+                        requireAbsolute( file );
+                    } );
+                }
+            } );
+
+        // Recurse on directories
+        _
+            .chain( file_list )
+            .filter( function( file ) {
+                var file_path = path.resolve( root_directory, file );
+                return fs.lstatSync( file_path ).isDirectory()
+            } )
+            .each( function( file ) {
+                var file_path = path.resolve( root_directory, file );
+                describe( file, function() {
+                    recursiveTestImport( file_path );
+                } )
             } );
     };
 

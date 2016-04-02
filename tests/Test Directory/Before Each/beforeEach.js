@@ -5,10 +5,4 @@
  * of the MIT license.  See the LICENSE file for details.
  */
 
-'use strict';
-
-var assert = require( 'chai' ).assert;
-
-it( 'should have value', function() {
-    assert( global.before_set == true );
-} );
+global.before_set = true;

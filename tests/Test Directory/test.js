@@ -1,14 +1,12 @@
 /**
- * Copyright of Mark One Lifestyle Inc.
+ * Copyright (C) 2016 Michael Lyons
  *
- * Authors:
- *     - Mike Lyons (m@mkone.co)
+ * This software may be modified and distributed under the terms
+ * of the MIT license.  See the LICENSE file for details.
  */
 
-(function() {
-    'use strict';
+'use strict';
 
-    it( 'Should test something', function() {
+it( 'Should test something', function() {
 
-    } );
-})();
+} );

@@ -1,12 +1,10 @@
 /**
- * This file is licensed under the MIT license
+ * Copyright (C) 2016 Michael Lyons
  *
- * Authors:
- *     - Michael Lyons (mdl0394@gmail.com)
+ * This software may be modified and distributed under the terms
+ * of the MIT license.  See the LICENSE file for details.
  */
 
-(function() {
-    'use strict';
+'use strict';
 
-    require( '../' )();
-})();
+require( '../' )();
